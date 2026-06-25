@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Kit Vault – FIFA 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="particleCanvas"></canvas>
+
+<!-- NAVBAR -->
+<nav>
+  <a class="logo" href="#">THE KIT VAULT</a>
+  <button id="cartBtn">
+    🛒 Cart <span id="cartCount">0</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <p class="eyebrow">OFFICIAL CLUB MERCHANDISE · FIFA 2026</p>
+  <h1 class="hero-title">THE KIT<br>VAULT</h1>
+  <p class="hero-sub">CRAFTED FOR CHAMPIONS</p>
+  <div class="stock-badge">
+    <span class="stock-dot"></span>
+    🔥 Only <span id="stockNum">26</span> jerseys left
+  </div>
+  <a href="#collection" class="cta-btn">EXPLORE COLLECTION</a>
+</div>
+
+<!-- JERSEY COLLECTION -->
+<section id="collection">
+  <p class="section-label reveal">PICK YOUR CLUB</p>
+  <h2 class="section-title reveal">Pick Your Club</h2>
+  <div class="cards-grid">
+
+    <!-- Argentina -->
+    <div class="jersey-card card-arg reveal" data-country="Argentina" data-flag="🇦🇷" data-price="4999">
+      <div class="card-img-wrap">
+        <img src="image/argentina.jpeg" alt="Argentina Kit"/>
+        <span class="card-flag">🇦🇷</span>
+        <span class="card-player-badge">MESSI #10</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-country">Argentina</h3>
+        <p class="card-kit-year">HOME KIT · 2026</p>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-num">4.9</span>
+        </div>
+        <div class="card-price">₹4,999</div>
+        <p class="size-label">SELECT SIZE</p>
+        <div class="size-grid">
+          <button class="size-btn" data-size="S">S</button>
+          <button class="size-btn" data-size="M">M</button>
+          <button class="size-btn" data-size="L">L</button>
+          <button class="size-btn" data-size="XL">XL</button>
+        </div>
+        <button class="add-btn">ADD TO CART</button>
+      </div>
+    </div>
+
+    <!-- Brazil -->
+    <div class="jersey-card card-bra reveal" style="transition-delay:0.1s" data-country="Brazil" data-flag="🇧🇷" data-price="4599">
+      <div class="card-img-wrap">
+       <img src="image/brazil.jpeg" alt="Brazil Kit"/>
+        <span class="card-flag">🇧🇷</span>
+        <span class="card-player-badge">NEYMAR #10</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-country">Brazil</h3>
+        <p class="card-kit-year">HOME KIT · 2026</p>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-num">4.8</span>
+        </div>
+        <div class="card-price">₹4,599</div>
+        <p class="size-label">SELECT SIZE</p>
+        <div class="size-grid">
+          <button class="size-btn" data-size="S">S</button>
+          <button class="size-btn" data-size="M">M</button>
+          <button class="size-btn" data-size="L">L</button>
+          <button class="size-btn" data-size="XL">XL</button>
+        </div>
+        <button class="add-btn">ADD TO CART</button>
+      </div>
+    </div>
+
+    <!-- France -->
+    <div class="jersey-card card-fra reveal" style="transition-delay:0.2s" data-country="France" data-flag="🇫🇷" data-price="4799">
+      <div class="card-img-wrap">
+    <img src="image/france.jpeg" alt="France Kit"/>
+        <span class="card-flag">🇫🇷</span>
+        <span class="card-player-badge">MBAPPÉ #10</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-country">France</h3>
+        <p class="card-kit-year">HOME KIT · 2026</p>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-num">4.7</span>
+        </div>
+        <div class="card-price">₹4,799</div>
+        <p class="size-label">SELECT SIZE</p>
+        <div class="size-grid">
+          <button class="size-btn" data-size="S">S</button>
+          <button class="size-btn" data-size="M">M</button>
+          <button class="size-btn" data-size="L">L</button>
+          <button class="size-btn" data-size="XL">XL</button>
+        </div>
+        <button class="add-btn">ADD TO CART</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SMART FIT -->
+<div id="fit">
+  <div class="fit-card reveal">
+    <p class="section-label" style="margin-bottom:10px">SMART FIT ASSISTANT</p>
+    <h2 class="section-title" style="font-size:clamp(22px,3vw,32px);margin-bottom:32px">Find Your Perfect Fit</h2>
+    <div class="fit-fields">
+      <div class="fit-field">
+        <label>HEIGHT (CM)</label>
+        <input type="number" id="heightInput" value="175" min="140" max="220"/>
+      </div>
+      <div class="fit-field">
+        <label>WEIGHT (KG)</label>
+        <input type="number" id="weightInput" value="70" min="40" max="150"/>
+      </div>
+    </div>
+    <button id="fitBtn">RECOMMEND MY SIZE</button>
+    <div id="fitResult">
+      <div class="fit-result-size" id="fitSize">—</div>
+      <div class="fit-result-desc" id="fitDesc"></div>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 The Kit Vault · FIFA Official Club Merchandise · All rights reserved</footer>
+
+<!-- CART DRAWER (hidden until cart icon is clicked) -->
+<div id="cartOverlay"></div>
+<div id="cartDrawer">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button id="closeCartBtn">✕</button>
+  </div>
+  <div id="cartItemsWrap">
+    <p id="emptyCartMsg">Your cart is empty.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>TOTAL</span>
+      <span id="cartTotal">₹0</span>
+    </div>
+    <button id="checkoutBtn">PROCEED TO CHECKOUT</button>
+  </div>
+</div>
+
+<div id="toastWrap"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
