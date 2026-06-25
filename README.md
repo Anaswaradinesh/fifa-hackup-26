@@ -19,7 +19,7 @@
 ---
 
 ## 🌐 Live Demo
-🔗 [Click here to view demo]() 
+🔗 [Click here to view demo](https://anaswaradinesh.github.io/fifa-hackup-26/) 
 
 ---
 
